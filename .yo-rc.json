@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Horace Lee",
+      "authorEmail": "horaceylee2@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
