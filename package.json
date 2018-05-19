@@ -1,6 +1,6 @@
 {
   "name": "generator-libgdx",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A generator for easy project setup of Libgdx projects",
   "homepage": "",
   "author": {
