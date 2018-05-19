@@ -1,4 +1,8 @@
-# generator-libgdx [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-libgdx 
+
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
+
 > A generator for easy project setup of Libgdx projects
 
 ## Installation
@@ -15,6 +19,19 @@ Then generate your new project:
 ```bash
 yo libgdx
 ```
+
+## Versions
+
+Name | Version
+--- | --- | ---
+LibGDX | `1.9.8`
+Gradle | `4.5`
+Dagger | `2.0.2`
+Android Build Tool | `26.0.2`
+Android SDK | `27`
+GWT | `2.8.0`
+GWT Gradle Plugin | `1.0.6`
+RoboVM | `2.3.3`
 
 ## Getting To Know Yeoman
 

@@ -21,7 +21,7 @@ allprojects {
 
     version = '1.0'
     ext {
-        appName = "libgdx-dagger2"
+        appName = "<%= appname %>"
         gdxVersion = '1.9.8'
         daggerVersion = '2.0.2'
         roboVMVersion = '2.3.3'
