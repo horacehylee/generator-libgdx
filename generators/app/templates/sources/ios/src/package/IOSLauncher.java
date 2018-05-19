@@ -1,4 +1,4 @@
-package <%= projectPackage =>;
+package <%= projectPackage %>;
 
 import com.badlogic.gdx.backends.iosrobovm.IOSApplication;
 import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;

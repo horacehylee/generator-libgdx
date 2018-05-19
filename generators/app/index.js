@@ -32,7 +32,7 @@ const globals = ["githubUser", "authorName", "authorEmail", "projectGroup"];
 
 module.exports = class extends JavaGenerator {
   constructor(args, opts) {
-    super(args, opts, require("../package.json"));
+    super(args, opts, require("../../package.json"));
 
     this.option("offline", {
       desc: "Disables github user lookup",
@@ -98,6 +98,9 @@ module.exports = class extends JavaGenerator {
           message: "GitHub username",
           default: this.$defaultValue("githubUser"),
           validate: function(input) {
+            if (input === gen.$defaultValue("githubUser")) {
+              return true;
+            }
             return new Promise(resolve => {
               if (options.offline) {
                 if (input) {
@@ -210,7 +213,7 @@ module.exports = class extends JavaGenerator {
   }
 
   writing() {
-    this.projectPackageWithSlash = projectPackage.replace(".", "/");
+    this.projectPackageWithSlash = this.projectPackage.replace(/\./g, '/');
 
     // base
     const writeOnceFiles = [
@@ -224,8 +227,9 @@ module.exports = class extends JavaGenerator {
     this.$copyTpl("project-base", { writeOnceFiles: writeOnceFiles });
 
     // sources
-    if (!this.$exists("src/main")) {
+    if (!this.$exists("core")) {
       this.$copySources(this.projectPackage, "sources");
+      this.$copy("sources-img", { writeOnceFiles: writeOnceFiles });
     } else {
       this.log(chalk.yellow("     skip ") + "sources generation");
     }

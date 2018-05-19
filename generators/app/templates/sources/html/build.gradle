@@ -18,8 +18,8 @@ gwt {
     src = files(file("src/")) // Needs to be in front of "modules" below.
     src += files(new File(project(":core").projectDir, "/build/generated/source/apt/main"))
 
-    modules '<%= projectPackage =>.GdxDefinition'
-    devModules '<%= projectPackage =>.GdxDefinitionSuperdev'
+    modules '<%= projectPackage %>.GdxDefinition'
+    devModules '<%= projectPackage %>.GdxDefinitionSuperdev'
     //project.webAppDirName = 'webapp'
 
     compiler.strict = true
